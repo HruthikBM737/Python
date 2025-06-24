@@ -1,0 +1,26 @@
+print('NAME: Hruthik BM', 'USN: 1AY24AI046')
+
+# Table printer function
+def print_table(table_data):
+# Find the maximum width of each column
+col_widths = [
+max(len(str(item)) for item in col)
+for col in zip(*table_data)
+]
+
+# Print each row with aligned columns
+for row in table_data:
+for i, item in enumerate(row):
+print(str(item).rjust(col_widths[i]), end='  ')
+print()  # Newline after each row
+
+# Sample table data
+table = [
+["name",    "age", "city"],
+["alice",   30,    "new york"],
+["bob",     25,    "los angels"],
+["charlie", 35,    "chicago"]
+]
+
+# Print the formatted table
+print_table(table)

@@ -1,0 +1,33 @@
+print('NAME: Hruthik BM', 'USN: 1AY24AI046')
+
+import random
+
+# Dice faces for a simplified Zombie Dice game
+dice = ['brain', 'brain', 'brain', 'footsteps', 'footsteps', 'shot']
+
+def roll():
+return random.choice(dice)
+
+def zombie_dice_bot():
+brains = 0
+shots = 0
+
+print("Zombie is rolling...")
+
+while shots < 2:
+result = roll()
+print("Rolled:", result)
+
+if result == 'brain':
+brains += 1
+elif result == 'shot':
+shots += 1
+
+if shots >= 2:
+print("Too many shots! Stop rolling.")
+break
+
+print("Brains collected:", brains)
+
+# Run the bot
+zombie_dice_bot()

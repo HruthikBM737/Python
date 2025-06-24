@@ -1,0 +1,20 @@
+print('NAME: Hruthik BM', 'USN: 1AY24AI046')
+
+grid = [
+['.','.','.','.','.','.'],
+['.','0','0','.','.','.'],
+['0','0','0','0','.','.'],
+['.','0','0','0','0','0'],
+['0','0','0','0','0','.'],
+['0','0','0','0','.','.'],
+['.','0','0','.','.','.'],
+['.','.','.','.','.','.']  # removed extra comma
+]
+
+# Transpose and print
+for col in range(len(grid[0])):  # loop through columns
+for row in range(len(grid)):  # loop through rows
+print(grid[row][col], end=' ')  # print column-wise
+print()  # new line after each column
+
+

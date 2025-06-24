@@ -1,0 +1,12 @@
+print('NAME: Hruthik BM', 'USN: 1AY24AI046')
+
+import random
+
+streaks = 0  # Count how many times we get a streak of 10
+
+for test in range(10000):  # Repeat the experiment 10,000 times
+flips = []  # List to store 100 coin flips
+
+# Flip the coin 100 times
+for i in range(100):
+flips.append(random.choice(['H', 'T']))  # H = Heads, T = Tails
